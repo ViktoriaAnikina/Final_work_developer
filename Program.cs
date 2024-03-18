@@ -8,18 +8,19 @@ namespace FinalWork
         
         public static void Main() //Основной метод программы.
         {
+            Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16"); // Смена кодировки, исправлена ошибка, когда при вводе русского текста в тело массива оно не обробатовалось.
+
             HelperDataArrayTests dataArray = new HelperDataArrayTests();
             HelperMethods helpMethods = new HelperMethods();
 
             string[] ArrayTest;
 
             Console.Write("Выберите вариант начальных данных, где ");
-            Console.WriteLine("1 - Выбор из придложенных варианов, 2 - ввод массива чисел через консоль: ");
-            //int NumberCondition = helpMethods.CheckCondition(1);
-            int NumberCondition = helpMethods.CheckOUT(1,2);
+            Console.WriteLine("1 - Выбор из предложенных варианов, 2 - ввод массива чисел через консоль: ");
+            int NumberCondition = helpMethods.CheckOUT(1,2); // Метод обрабатывающий варианты выбора, исключающий неверные.
             if (NumberCondition == 1)
             {
-                ArrayTest = helpMethods.ArrayTest();
+                ArrayTest = helpMethods.ArrayTest(); 
             }
             else
             {

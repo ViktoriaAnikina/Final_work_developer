@@ -12,17 +12,17 @@ namespace FinalWork
             if (Number == 1)
             {
 
-                Data = ["Hello", "2", "world", ":-)"];
+                Data = ["“Hello”", "“2”", "“world”", "“:-)”"];
             }
             if (Number == 2)
             {
 
-                Data = ["1234", "1567", "-2", "computer science"];
+                Data = ["“1234”", "“1567”", "“-2”", "“computer science”"];
             }
             if (Number == 3)
             {
 
-                Data = ["Russia", "Denmark", "Kazan"];
+                Data = ["“Russia”", "“Denmark”", "“Kazan”"];
             }
             if (Number != 1 & Number != 2 & Number != 3)
             {
