@@ -3,12 +3,12 @@ using System.Text;
 
 namespace FinalWork
 {
-    public class Array // Основной класс программы
+    public class Program // Основной класс программы
     {
         
         public static void Main() //Основной метод программы.
         {
-            Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16"); // Смена кодировки, исправлена ошибка, когда при вводе русского текста в тело массива оно не обробатовалось.
+            Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16"); // Смена кодировки, исправлена ошибка, когда при вводе русского текста в тело массива оно не обробатовалось.(воспроизводилось только на Visual Studio Code, на версии Community нет)
 
             HelperDataArrayTests dataArray = new HelperDataArrayTests();
             HelperMethods helpMethods = new HelperMethods();
@@ -27,9 +27,6 @@ namespace FinalWork
                 ArrayTest = helpMethods.CreatArray();
             }
 
-            
-            // string[] ArrayTest = ["1","2"]; // Вариант для использования своего массива.
-            //string[] ArrayTest = dataArray.ArrayTest(1); // В параметре выбрать один из 3 вариантов предложенных для проверки.
             string[] ArrayItog = helpMethods.ArrayCheck(ArrayTest);  //Получения массива с выполнением условий задания.
             Console.Write("[" + String.Join(", ", ArrayTest) + "] → "); // склейка с добавлением начального массива в вывод.
             helpMethods.ArrayPrint(ArrayItog); // Печать полученного массива в терминал.

@@ -5,9 +5,9 @@ namespace FinalWork
 {
     public class HelperDataArrayTests //Вспомогательный класс, хранящий метод содержащий тестовые массивы для проверки из условий задания.
     {
-        public  string[] ArrayTest(int Number)
+        public  string[] ArrayTestExample(int Number)
         {
-            string[] Data = ["1", "2"];
+            string[] Data = new string[0];
 
             if (Number == 1)
             {

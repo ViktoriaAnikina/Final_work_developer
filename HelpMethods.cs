@@ -14,8 +14,6 @@ namespace FinalWork
 
         public  string[] ArrayCheck(string[] ArrayCheck) // Метод получения нового массива, по текущему, использовая только значения, где количество символов 3 и меньше.
         {
-            
-            
             int SizeArray = 0;
             for(int i = 0; i < ArrayCheck.Length; i++) // цикл вычисляющий нужный размер для нового массива
             {
@@ -47,10 +45,9 @@ namespace FinalWork
         }
         
 
-        public  int CheckOUT(int Number, int Size)
+        public  int CheckOUT(int Number, int Size) // Проверяет входные данные для методов.
         {
             int Number0 = -0;
-            Console.WriteLine("Выберите один из предложенных вариантов");
             Number0 = Convert.ToInt32(Console.ReadLine());
             if (Number0 < 1 || Number0 > Size)
             {
@@ -60,21 +57,20 @@ namespace FinalWork
             return Number0;
         }
 
-        public string[] ArrayTest()
+        public string[] ArrayTest() // Выводит примеры массивов из условия задания и предлагает выбрать один.
         {
             Console.WriteLine("Варианты массивов:");
             Console.Write("1. ");
-            ArrayPrint(dataArray.ArrayTest(1));
+            ArrayPrint(dataArray.ArrayTestExample(1));
             Console.Write("2. ");
-            ArrayPrint(dataArray.ArrayTest(2));
+            ArrayPrint(dataArray.ArrayTestExample(2));
             Console.Write("3. ");
-            ArrayPrint(dataArray.ArrayTest(3));
-            //int ArrayNumber = CheckCondition(2);
+            ArrayPrint(dataArray.ArrayTestExample(3));
             int ArrayNumber = CheckOUT(2,3);
-            return dataArray.ArrayTest(ArrayNumber);
+            return dataArray.ArrayTestExample(ArrayNumber);
         }
 
-        public  string[] CreatArray()
+        public  string[] CreatArray() // Создание пользовательского массива.
         {
             Console.WriteLine("Введите количество элементов в массиве:");
             int Length = 0;
@@ -83,9 +79,8 @@ namespace FinalWork
                 Length = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Значение количества элементов в массиве, должно быть больше 1");
             }
-            //Length = Convert.ToInt32(Console.ReadLine());
+            
             string[] Array = new string[Length];
-            //string ReadConsole;
             
             for (int i = 0; i < Length; i++)
             {
