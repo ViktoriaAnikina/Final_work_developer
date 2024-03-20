@@ -14,6 +14,7 @@ namespace FinalWork
 
         public  string[] ArrayCheck(string[] ArrayCheck) // Метод получения нового массива, по текущему, использовая только значения, где количество символов 3 и меньше.
         {
+            
             int SizeArray = 0;
             for(int i = 0; i < ArrayCheck.Length; i++) // цикл вычисляющий нужный размер для нового массива
             {
@@ -80,31 +81,29 @@ namespace FinalWork
                 Console.WriteLine("Значение количества элементов в массиве, должно быть больше 1");
             }
             
-            string[] Array = new string[Length];
+            string[] ArrayItog = new string[Length];
             
-            for (int i = 0; i < Length; i++)
+            for (int i = 0; i < Length;)
             {
                 Console.WriteLine($"Введите {i+1} значение");
-                for(;;)
+                
+                    
+                string? ReadConsole = Console.ReadLine();
+                    
+                if (ReadConsole != "")
                 {
-                    
-                    string? ReadConsole = Console.ReadLine();
-                    
-                    if (ReadConsole != null)
-                    {
-                        
-                        Array[i] = "“" + ReadConsole + "”";
-                        break;
+                    ArrayItog[i] = "“" + ReadConsole + "”";
+                    i++;
                     }
-                    else
-                    {
-                        Console.WriteLine("Введите значние отличное от NULL");
-                    }
+                else
+                {
+                    Console.WriteLine("Введите значние отличное от NULL");
                 }
+                
                 
             }
             
-            return Array;
+            return ArrayItog;
         }
     }
 }
